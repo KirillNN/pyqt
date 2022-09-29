@@ -12,6 +12,12 @@ def application():
     window.setWindowTitle('Простая программа')
     window.setGeometry(300, 250, 350, 200)
 
+    main_text = QtWidgets.QLabel(window)
+    main_text.setText('Это базовая надпись')
+    main_text.move(100, 100)
+    # main_text.setFixedWidth(200)
+    main_text.adjustSize()
+
     window.show()
     sys.exit(app.exec_())
 
