@@ -5,6 +5,10 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 import sys
 
 
+def add_label():
+    print('add')
+
+
 def application():
     app = QApplication(sys.argv)
     window = QMainWindow()
@@ -17,6 +21,12 @@ def application():
     main_text.move(100, 100)
     # main_text.setFixedWidth(200)
     main_text.adjustSize()
+
+    btn = QtWidgets.QPushButton(window)
+    btn.move(70, 150)
+    btn.setText('Нажми на меня')
+    btn.setFixedWidth(200)
+    btn.clicked.connect(add_label)
 
     window.show()
     sys.exit(app.exec_())
